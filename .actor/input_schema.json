@@ -1,0 +1,36 @@
+{
+    "title": "UAE Industrial Scraper Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "keyword": {
+            "title": "Keyword (Industry/Equipment)",
+            "type": "string",
+            "description": "The specific industrial category (e.g., 'heavy machinery', 'industrial equipment', 'steel suppliers').",
+            "editor": "textfield",
+            "prefill": "heavy machinery"
+        },
+        "location": {
+            "title": "Location (City or Free Zone)",
+            "type": "string",
+            "description": "The UAE City or Free Zone (e.g., 'Jebel Ali', 'Dubai', 'Abu Dhabi').",
+            "editor": "textfield",
+            "prefill": "Jebel Ali"
+        },
+        "maxLeads": {
+            "title": "Maximum Leads",
+            "type": "integer",
+            "description": "Maximum number of UAE industrial leads to extract.",
+            "default": 100,
+            "minimum": 1
+        },
+        "proxyConfiguration": {
+            "title": "Proxy Configuration",
+            "type": "object",
+            "description": "Proxy settings. Apify Residential Proxy (UAE targeted) is highly required.",
+            "prefill": { "useApifyProxy": true },
+            "editor": "proxy"
+        }
+    },
+    "required": ["keyword", "location"]
+}

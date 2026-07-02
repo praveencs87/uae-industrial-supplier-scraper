@@ -1,0 +1,37 @@
+{
+    "actorSpecification": 1,
+    "name": "uae-industrial-supplier-scraper",
+    "title": "UAE Industrial Supplier Scraper",
+    "description": "Extract verified manufacturers, heavy equipment suppliers, and industrial companies across UAE Free Zones. Premium B2B leads.",
+    "version": "1.0",
+    "input": "./input_schema.json",
+    "dockerfile": "./Dockerfile",
+    "minMemoryMbytes": 1024,
+    "maxMemoryMbytes": 4096,
+    "pricingModel": "PAY_PER_EVENT",
+    "pricingEvents": [
+        {
+            "eventName": "apify-actor-start",
+            "pricePerEvent": 0.25,
+            "description": "Base fee for starting the crawler (Playwright overhead)"
+        },
+        {
+            "eventName": "lead-extracted",
+            "pricePerEvent": 0.0035,
+            "description": "Charged per UAE Industrial/Manufacturing lead successfully extracted ($3.50 per 1k leads)"
+        }
+    ],
+    "isPublic": true,
+    "seoTitle": "UAE Industrial Supplier Scraper | Free Zone B2B Leads",
+    "seoDescription": "Scrape verified manufacturers and heavy equipment suppliers in JAFZA, KIZAD, and other UAE free zones. High-value B2B industrial leads.",
+    "categories": [
+        "LEAD_GENERATION",
+        "BUSINESS",
+        "E_COMMERCE"
+    ],
+    "defaultRunOptions": {
+        "build": "latest",
+        "timeoutSecs": 3600,
+        "memoryMbytes": 1024
+    }
+}
